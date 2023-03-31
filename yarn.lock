@@ -4190,6 +4190,7 @@ __metadata:
     typescript: ^5.0.2
     web3-core: "workspace:^"
     web3-providers: "workspace:^"
+    web3-utils: "workspace:^"
     webpack: ^5.77.0
   languageName: unknown
   linkType: soft
@@ -4206,6 +4207,20 @@ __metadata:
     ts-node: ^10.9.1
     typescript: ^5.0.2
     web3-core: "workspace:^"
+    webpack: ^5.77.0
+  languageName: unknown
+  linkType: soft
+
+"web3-utils@workspace:^, web3-utils@workspace:packages/web3-utils":
+  version: 0.0.0-use.local
+  resolution: "web3-utils@workspace:packages/web3-utils"
+  dependencies:
+    "@types/jest": ^29.5.0
+    "@types/node": ^18.15.11
+    jest: ^29.5.0
+    ts-jest: ^29.0.5
+    ts-node: ^10.9.1
+    typescript: ^5.0.2
     webpack: ^5.77.0
   languageName: unknown
   linkType: soft

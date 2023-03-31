@@ -70,3 +70,5 @@ export type Block = {
     withdrawals: Withdrawals;
     uncles: HexString[];
 }
+
+export type BlockTag = 'earliest' | 'pending' | 'latest' | 'finalized' | 'safe';

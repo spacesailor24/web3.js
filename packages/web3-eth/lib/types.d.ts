@@ -1,4 +1,4 @@
-type HexString = string;
+export type HexString = string;
 type Address = HexString;
 export type BlockHash = HexString;
 type BaseSignedTransaction = {
@@ -63,5 +63,6 @@ export type Block = {
     withdrawals: Withdrawals;
     uncles: HexString[];
 };
+export type BlockTag = 'earliest' | 'pending' | 'latest' | 'finalized' | 'safe';
 export {};
 //# sourceMappingURL=types.d.ts.map

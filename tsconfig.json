@@ -12,6 +12,9 @@
       {
         "path": "./packages/web3-providers"
       },
+      {
+        "path": "./packages/web3-utils"
+      },
     ],
     "compilerOptions": {
       /* Visit https://aka.ms/tsconfig to read more about this file */

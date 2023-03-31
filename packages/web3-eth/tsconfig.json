@@ -8,6 +8,9 @@
 	"references": [
 		{
 			"path": "../web3-core"
+		},
+		{
+			"path": "../web3-utils"
 		}
 	]
 }

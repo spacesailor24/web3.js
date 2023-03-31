@@ -1,5 +1,5 @@
 import { Web3RequestManager } from "web3-core";
-import { Block, BlockHash } from "../types";
+import { Block, BlockHash } from "../../src/types";
 /**
  * Returns information about a block by hash
  *

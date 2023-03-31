@@ -30,6 +30,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {\
         "name": "web3-providers",\
         "reference": "workspace:packages/web3-providers"\
+      },\
+      {\
+        "name": "web3-utils",\
+        "reference": "workspace:packages/web3-utils"\
       }\
     ],\
     "enableTopLevelFallback": true,\
@@ -39,6 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["web3-core", ["workspace:packages/web3-core"]],\
       ["web3-eth", ["workspace:packages/web3-eth"]],\
       ["web3-providers", ["workspace:packages/web3-providers"]],\
+      ["web3-utils", ["workspace:packages/web3-utils"]],\
       ["web3.js", ["workspace:."]]\
     ],\
     "fallbackPool": [\
@@ -5301,6 +5306,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"],\
             ["web3-core", "workspace:packages/web3-core"],\
             ["web3-providers", "workspace:packages/web3-providers"],\
+            ["web3-utils", "workspace:packages/web3-utils"],\
             ["webpack", "virtual:d173e7d14a690f296a5b85d21e0fc172dbb16de2f5874be8410e11b74d06dcf11026c6dc1147bbb8b5fa4faa578911757b237a2ff71d0ff55c8aec79f34e76d8#npm:5.77.0"]\
           ],\
           "linkType": "SOFT"\
@@ -5319,6 +5325,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:d173e7d14a690f296a5b85d21e0fc172dbb16de2f5874be8410e11b74d06dcf11026c6dc1147bbb8b5fa4faa578911757b237a2ff71d0ff55c8aec79f34e76d8#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"],\
             ["web3-core", "workspace:packages/web3-core"],\
+            ["webpack", "virtual:d173e7d14a690f296a5b85d21e0fc172dbb16de2f5874be8410e11b74d06dcf11026c6dc1147bbb8b5fa4faa578911757b237a2ff71d0ff55c8aec79f34e76d8#npm:5.77.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["web3-utils", [\
+        ["workspace:packages/web3-utils", {\
+          "packageLocation": "./packages/web3-utils/",\
+          "packageDependencies": [\
+            ["web3-utils", "workspace:packages/web3-utils"],\
+            ["@types/jest", "npm:29.5.0"],\
+            ["@types/node", "npm:18.15.11"],\
+            ["jest", "virtual:d173e7d14a690f296a5b85d21e0fc172dbb16de2f5874be8410e11b74d06dcf11026c6dc1147bbb8b5fa4faa578911757b237a2ff71d0ff55c8aec79f34e76d8#npm:29.5.0"],\
+            ["ts-jest", "virtual:d173e7d14a690f296a5b85d21e0fc172dbb16de2f5874be8410e11b74d06dcf11026c6dc1147bbb8b5fa4faa578911757b237a2ff71d0ff55c8aec79f34e76d8#npm:29.0.5"],\
+            ["ts-node", "virtual:d173e7d14a690f296a5b85d21e0fc172dbb16de2f5874be8410e11b74d06dcf11026c6dc1147bbb8b5fa4faa578911757b237a2ff71d0ff55c8aec79f34e76d8#npm:10.9.1"],\
+            ["typescript", "patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"],\
             ["webpack", "virtual:d173e7d14a690f296a5b85d21e0fc172dbb16de2f5874be8410e11b74d06dcf11026c6dc1147bbb8b5fa4faa578911757b237a2ff71d0ff55c8aec79f34e76d8#npm:5.77.0"]\
           ],\
           "linkType": "SOFT"\
