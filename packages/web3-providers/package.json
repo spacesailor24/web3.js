@@ -4,11 +4,6 @@
   "packageManager": "yarn@3.5.0",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./lib/index.d.ts"
-    }
-  },
   "scripts": {
     "build": "tsc -b",
     "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",

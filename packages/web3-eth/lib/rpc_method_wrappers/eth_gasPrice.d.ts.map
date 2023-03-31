@@ -1,0 +1,1 @@
+{"version":3,"file":"eth_gasPrice.d.ts","sourceRoot":"","sources":["../../src/rpc_method_wrappers/eth_gasPrice.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,kBAAkB,EAAE,MAAM,WAAW,CAAC;AAE/C,wBAAsB,WAAW,CAAC,cAAc,EAAE,kBAAkB,EAAE,eAAe,CAAC,EAAE,GAAG,oBAU1F"}

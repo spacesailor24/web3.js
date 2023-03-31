@@ -1,18 +1,8 @@
 import { Web3PluginFactory, Web3RequestManager } from "web3-core";
 
-export async function getGasPrice(requestManager: Web3RequestManager, providerOptions?: any) {
-    return requestManager.send(
-        {
-            "jsonrpc": "2.0",
-            "method": "eth_gasPrice",
-            "params": [],
-            "id": 0
-        },
-        providerOptions
-    )
-}
+import { getGasPrice } from "./rpc_method_wrappers/eth_gasPrice";
 
-class Web3EthPluginInstance {
+export class Web3Eth {
     private _requestManager: Web3RequestManager;
 
     constructor(requestManager: Web3RequestManager) {
@@ -28,6 +18,6 @@ export class Web3EthPlugin extends Web3PluginFactory {
     public pluginNamespace = 'eth';
 
     public init(requestManager: Web3RequestManager) {
-        return new Web3EthPluginInstance(requestManager);
+        return new Web3Eth(requestManager);
     }
 }
