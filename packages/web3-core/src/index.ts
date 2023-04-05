@@ -7,13 +7,13 @@ abstract class Web3Provider {
 }
 
 export class Web3Context {
-    public provider: string;
+    public providerUrl: string;
 
     constructor(providerOrConfig: string | Web3Config) {
         if (typeof providerOrConfig === 'string') {
-            this.provider = providerOrConfig;
+            this.providerUrl = providerOrConfig;
         } else {
-            this.provider = providerOrConfig.provider;
+            this.providerUrl = providerOrConfig.provider;
         }
     }
 }
@@ -25,7 +25,10 @@ export class Web3RequestManager {
         this._provider = provider;
     }
 
-    public send(payload: any, options?: any ) {
+    public request(
+        payload: { method: string, params: unknown[] },
+        options?: unknown
+    ) {
         return this._provider.request(payload, options);
     }
 }

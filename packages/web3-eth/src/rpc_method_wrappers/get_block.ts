@@ -25,31 +25,14 @@ export async function getBlock(
     requestManager: Web3RequestManager,
     blockIdentifier: BlockHash | HexString | BlockTag,
     hydratedTransaction: Boolean,
-    providerOptions?: any
+    providerOptions?: unknown
 ): Promise<Block | null> {
-    let block: Block | null;
-
-    if (isHexStrict(blockIdentifier)) {
-        block = await requestManager.send(
-            {
-                "jsonrpc": "2.0",
-                "method": "eth_getBlockByHash",
-                "params": [blockIdentifier, hydratedTransaction],
-                "id": 0
-            },
-            providerOptions
-        ) as unknown as Block | null;
-    } else {
-        block = await requestManager.send(
-            {
-                "jsonrpc": "2.0",
-                "method": "eth_getBlockByNumber",
-                "params": [blockIdentifier, hydratedTransaction],
-                "id": 0
-            },
-            providerOptions
-        ) as unknown as Block | null;
-    }
-
-    return block
+    return requestManager.request(
+        {
+            // TODO isHex32Bytes
+            "method": isHexStrict(blockIdentifier) ? "eth_getBlockByHash" : "eth_getBlockByNumber",
+            "params": [blockIdentifier, hydratedTransaction],
+        },
+        providerOptions
+    ) as unknown as Block | null;
 }

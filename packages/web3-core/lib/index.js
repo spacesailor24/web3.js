@@ -4,13 +4,13 @@ exports.Web3PluginFactory = exports.Web3RequestManager = exports.Web3Context = v
 class Web3Provider {
 }
 class Web3Context {
-    provider;
+    providerUrl;
     constructor(providerOrConfig) {
         if (typeof providerOrConfig === 'string') {
-            this.provider = providerOrConfig;
+            this.providerUrl = providerOrConfig;
         }
         else {
-            this.provider = providerOrConfig.provider;
+            this.providerUrl = providerOrConfig.provider;
         }
     }
 }
@@ -20,7 +20,7 @@ class Web3RequestManager {
     constructor(provider) {
         this._provider = provider;
     }
-    send(payload, options) {
+    request(payload, options) {
         return this._provider.request(payload, options);
     }
 }

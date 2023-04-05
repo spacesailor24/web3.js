@@ -8,9 +8,7 @@ describe('getGasPrice', () => {
 
     beforeAll(() => {
         const requestManager = new Web3RequestManager(
-            new HttpProvider(
-                new Web3Context('http://127.0.0.1:8545')
-            )
+            new HttpProvider('http://127.0.0.1:8545')
         );
         web3Eth = new Web3Eth(requestManager);
     });

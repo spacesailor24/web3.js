@@ -5,13 +5,16 @@ declare abstract class Web3Provider {
     abstract request(payload: any, options: any): unknown;
 }
 export declare class Web3Context {
-    provider: string;
+    providerUrl: string;
     constructor(providerOrConfig: string | Web3Config);
 }
 export declare class Web3RequestManager {
     private _provider;
     constructor(provider: Web3Provider);
-    send(payload: any, options?: any): unknown;
+    request(payload: {
+        method: string;
+        params: unknown[];
+    }, options?: unknown): unknown;
 }
 export declare abstract class Web3PluginFactory {
     abstract pluginNamespace: string;

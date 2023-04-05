@@ -1,26 +1,26 @@
 import { Web3PluginFactory, Web3RequestManager } from "web3-core";
-import { HttpProvider } from "web3-providers";
+import { HttpProvider, WsProvider } from "web3-providers";
 
 export class Web3 {
     private _web3RequestManager: Web3RequestManager;
 
     constructor(
-        provider: HttpProvider,
+        provider: HttpProvider | WsProvider,
         plugins: Web3PluginFactory[],
         actions?: never
     )
     constructor(
-        provider: HttpProvider,
+        provider: HttpProvider | WsProvider,
         actions: unknown[],
         plugins?: never,
     )
     constructor(
-        provider: HttpProvider,
+        provider: HttpProvider | WsProvider,
         pluginsOrActions?: Web3PluginFactory[] | unknown[],
         actions?: unknown[]
     )
     constructor(
-        provider: HttpProvider,
+        provider: HttpProvider | WsProvider,
         pluginsOrActions?: Web3PluginFactory[] | unknown[],
         actions?: unknown[]
     ) {

@@ -4,14 +4,22 @@
   "packageManager": "yarn@3.5.0",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    }
+  },
   "scripts": {
     "build": "tsc -b",
     "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
-    "test:integration": "jest ./test/integration"
+    "test:integration": "jest ./test/integration",
+    "test:e2e": "jest ./test/e2e"
   },
   "dependencies": {
-    "cross-fetch": "^3.1.5",
-    "web3-core": "workspace:^"
+    "isomorphic-ws": "^5.0.0",
+    "web3-core": "workspace:^",
+    "ws": "^8.13.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",

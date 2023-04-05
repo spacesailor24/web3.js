@@ -7,7 +7,7 @@ class Web3 {
     constructor(provider, pluginsOrActions, actions) {
         this._web3RequestManager = new web3_core_1.Web3RequestManager(provider);
         if (pluginsOrActions !== undefined && pluginsOrActions.length > 0) {
-            if (pluginsOrActions[1].init !== undefined) {
+            if (pluginsOrActions[0].init !== undefined) {
                 this._initPlugins(pluginsOrActions);
             }
             else {
